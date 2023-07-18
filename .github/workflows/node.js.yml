@@ -8,6 +8,8 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  pull_request_target:
+    branches: [ "main" ]
 
 jobs:
   build:
@@ -31,6 +33,6 @@ jobs:
           curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.22.5
           export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
       - run: yarn --version
-      - run: npm install
+      - run: yarn install --frozen-lockfile
       - run: yarn build --if-present
       - run: yarn test
