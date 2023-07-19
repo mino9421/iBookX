@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Welcome to the Barbershop</h1>
+    <h1>Welcome to the iBookX</h1>
     <Services />
   </div>
 </template>
